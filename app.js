@@ -1,13 +1,12 @@
 new Vue({
   el: '#app',
   data: {
-    x: 0,
-    y:0
+   name: 'Segun'
   },
   methods: {
-  handlehover(e){
-     this.x = e.offsetX;
-     this.y = e.offsetY;
+  updateName(e){
+    console.log(e)
+    this.name = e.target.value;
    }
   }
 })

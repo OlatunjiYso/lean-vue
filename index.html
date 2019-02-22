@@ -19,10 +19,10 @@
 
 <body>
   <div id="app">
-    <span class="cord"> X: {{x}} </span> 
-    <span class="cord"> Y: {{y}}</span>
-    <div class="canvas" v-on:mousemove="handlehover"> </div>
-  </div>
+    <h1> My name is {{name}} </h1>
+
+   <label for=""> Change name</label>
+    <input v-on:keyup="updateName" type="text" />
   <script src="./app.js"></script>
 </body>
 
