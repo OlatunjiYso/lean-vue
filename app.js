@@ -1,12 +1,12 @@
 new Vue({
   el: '#app',
   data: {
-   name: 'Segun'
+    title: 'Becoming a Vue ninja',
+    name: 'Ryu'
   },
   methods: {
-  updateName(e){
-    console.log(e)
-    this.name = e.target.value;
-   }
+    logMessage(){
+      console.log('Hello, world!')
+    }
   }
 })
