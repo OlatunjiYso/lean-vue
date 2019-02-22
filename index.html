@@ -4,13 +4,24 @@
 <head>
   <title> Vue Basics</title>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+    .canvas{
+      width: 300px;
+      height: 400px;
+      margin-top: 50px;
+      background: #ddd;
+    }
+    .cord{
+      margin:30px;
+    }
+  </style>
 </head>
 
 <body>
   <div id="app">
-    <h1> Vue Basics </h1>
-    <h2> I earn {{wage}} pounds per hour </h2>
-    <button v-on:click="increaseWage(4)"> increase wage</button>
+    <span class="cord"> X: {{x}} </span> 
+    <span class="cord"> Y: {{y}}</span>
+    <div class="canvas" v-on:mousemove="handlehover"> </div>
   </div>
   <script src="./app.js"></script>
 </body>

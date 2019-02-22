@@ -1,12 +1,13 @@
 new Vue({
   el: '#app',
   data: {
-    wage: 10
+    x: 0,
+    y:0
   },
   methods: {
-   increaseWage(amount){
-     this.wage += amount;
-     good
+  handlehover(e){
+     this.x = e.offsetX;
+     this.y = e.offsetY;
    }
   }
 })
