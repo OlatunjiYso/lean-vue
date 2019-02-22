@@ -5,16 +5,26 @@
   <title> Vue Basics</title>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
-
 <body>
-  <h1>Vue Basics</h1>
-  <div id="app">
-    <h2>{{ title }}</h2>
-    <button type="text" @click.alt="logMessage">Alt-click me</button>
-    <button type="text" @click.shift="logMessage">Shift-click me</button>
-    <a href="http://www.google.com" @click.prevent="logMessage">Google</a>
-  </div>
-  <script src="app.js"></script>
-</body>
+
+    <h1>Food choice</h1>
+    <div id="app">
+      <h2>{{ title }}</h2>
+      
+      <p v-if="showRice"> Food: Rice</p>
+      <p v-else-if="showBeans">Food: Beans</p>
+      <p v-else=""> Food: Then nothing more</p>
+      <p v-if="showCoke">Drinks: Coke</p>
+      <p v-else-if="showFanta">Drinks: Fanta</p>
+      <p v-else>Drinks: no mre drinks</p>
+
+      <button @click="toggleRice">Have Rice: {{ showRice }}</button>
+      <button @click="toggleBeans">Have Beans: {{ showBeans || 'then nothing more' }}</button>
+      <button @click="toggleCoke">Have Coke: {{ showCoke }}</button>
+      <button @click="toggleFanta">Have Fanta: {{ showFanta }}</button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
 
 </html>

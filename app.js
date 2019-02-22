@@ -2,11 +2,23 @@ new Vue({
   el: '#app',
   data: {
     title: 'Becoming a Vue ninja',
-    name: 'Ryu'
+    showRice: true,
+    showBeans: true,
+    showCoke: true,
+    showFanta: true
   },
   methods: {
-    logMessage(){
-      console.log('Hello, world!')
+    toggleRice(){
+      this.showRice = !this.showRice 
+    },
+    toggleBeans(){
+      this.showBeans = !this.showBeans
+    },
+    toggleCoke(){
+      this.showCoke = !this.showCoke
+    },
+    toggleFanta(){
+      this.showFanta= !this.showFanta
     }
   }
 })
